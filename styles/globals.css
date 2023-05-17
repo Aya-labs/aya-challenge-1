@@ -187,3 +187,38 @@ a {
   vertical-align: middle;
   height: 100%;
 }
+.bg-gray-700,
+.bg-black {
+  background-color: #dbb066
+}
+
+.title a {
+  color: #f213a4;
+  text-decoration: none;
+}
+
+.title a:hover,
+.title a:focus,
+.title a:active {
+  text-decoration: underline;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+  font-weight: bolder;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+.description{
+  font-style: italic;
+}
+
+.the_color{
+  background-color: #ffa305;
+  font-weight: bolder;
+}

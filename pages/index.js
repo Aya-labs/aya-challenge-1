@@ -30,7 +30,7 @@ import RowSupplyAsset from "../components/ui/RowSupplyAsset";
 import RowBorrowAsset from "../components/ui/RowBorrowAsset";
 import SupplyRow from "../components/ui/SupplyRow";
 import BorrowRow from "../components/ui/BorrowRow";
-
+import Card from "../components/ui/Card";
 export default function Home() {
   const { network } = useNetwork();
   const { requireInstall, isLoading, connect, contract, web3 } = useWeb3();
@@ -611,9 +611,18 @@ export default function Home() {
           </div>
         ) : (
           <div className="w-full grid h-screen place-items-center bg-black text-white">
+            <div>
+            <h1 className="title">
+              Welcome to <a href="https://thirdweb.com/">KaLender-Crypto</a>!
+            </h1>
+
+            <p className="description">
+              The most reliable borrowing platform. Crypto is the collateral.
+            </p>
+            </div>
             <button
               onClick={() => connect()}
-              className="border border-white p-2 rounded-md"
+              className="border border-white p-2 rounded-md the_color"
             >
               Connect to metamask with your browser
             </button>

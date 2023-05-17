@@ -7,7 +7,7 @@ export default function ModalContact({closeModal}) {
       <div className="p-5">
         <div className="flex justify-between items-center rounded-t">
           <h3 className="text-xl font-medium text-gray-900 dark:text-white">
-            About Me
+            Meet The Developer
           </h3>
           <button
             onClick={() => {closeModal()}}
@@ -40,7 +40,7 @@ export default function ModalContact({closeModal}) {
           <button type="button" className="text-white bg-[#175bb0] hover:bg-[#043a7d] focus:ring-2 focus:outline-none focus:ring-[#3b5998]/50 font-medium rounded-1xl  text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3b5998]/55 mr-2 mb-2"
           onClick={() => {
             window.open(
-              `https://www.linkedin.com/in/paras-gaur/`,
+              `https://www.linkedin.com/in/howard-mabhugu-7a9a42228/`,
               "_blank"
             );
           }}>
@@ -60,7 +60,7 @@ export default function ModalContact({closeModal}) {
             <button type="button" className="text-white bg-[#565759] hover:bg-[#2f2f30] focus:ring-2 focus:outline-none focus:ring-[#3b5998]/50 font-medium rounded-1xl  text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3b5998]/55 mr-2 mb-2"
             onClick={() => {
               window.open(
-                `https://github.com/Parasgr7/`,
+                `https://github.com/BH3Techs/`,
                 "_blank"
               );
             }}>
@@ -72,7 +72,7 @@ export default function ModalContact({closeModal}) {
                       @Github
                   </div>
               </button>
-              <div className="font-bold mt-3 text-lg">Paras Gaur </div>Blockchain Developer
+              <div className="font-bold mt-3 text-lg">Howard Mabhugu </div>Blockchain Developer
             <div className="flex w-full items-center p-6 space-x-2 rounded-b border-gray-200 dark:border-gray-600">
             </div>
           </div>
