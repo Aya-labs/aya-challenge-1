@@ -323,10 +323,11 @@ export default function Home() {
                                 />
 
                                 <div className="">
-                                    {network.data === "Kovan Test Network"
-                                    ?<div className="text-2xl sm:text-2xl text- ml-2 text-white font-bold">Ethereum Kovan Market</div>
-                                    :  (<><div className="bg-red-500 p-2 text-sm rounded-md text-white">Connected to the Wrong network</div>
-                                    <div className="text-2xl sm:text-2xl text- ml-2 text-white font-bold">Switch to Kovan</div></>)
+                                    {network.data === "Goerli Test Network"
+                                    ?<div className="text-2xl sm:text-2xl text- ml-2 text-white font-bold">Ethereum Goerli Market</div>
+                                    :  network.data ==="Ganache" ? <div className="text-2xl sm:text-2xl text- ml-2 text-white font-bold">Ganache</div>
+                                    :(<><div className="bg-red-500 p-2 text-sm rounded-md text-white">Connected to the Wrong network</div>
+                                    <div className="text-2xl sm:text-2xl text- ml-2 text-white font-bold">Switch to Goerli Or Ganache</div></>)
                                     }
                                 </div>
                               </div>

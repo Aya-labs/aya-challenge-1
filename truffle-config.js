@@ -15,6 +15,14 @@ module.exports = {
       network_id: "*", // Match any network id
       gasPrice: 25000000000
     },
+    goerli: {
+      provider: () => {
+        return new HDWalletProvider(process.env.MNEMONIC, 'https://goerli.infura.io/v3/' + process.env.INFURA_API_KEY)
+      },
+      network_id: '5', // eslint-disable-line camelcase
+      gas: 4465030,
+      gasPrice: 10000000000,
+    },
     sepolia: {
       provider: function(){
         return new HDWalletProvider(

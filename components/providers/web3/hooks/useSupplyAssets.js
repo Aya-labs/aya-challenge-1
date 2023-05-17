@@ -21,13 +21,17 @@ export const handler = (web3, contract) => () => {
 
       const supplyAssets = []
 
+    //all the tokens for lending
+
       const tokens = await contract.methods.getTokensForLendingArray().call()
+      console.log("All tokens "+tokens)
 
       for (let i = 0; i < tokens.length; i++){
         const currentToken = tokens[i]
 
         const newToken = await normalizeToken(web3, contract, currentToken)
 
+        //You can actually see the token information coming here
         supplyAssets.push(newToken)
 
 
@@ -37,7 +41,7 @@ export const handler = (web3, contract) => () => {
     }
   );
 
-  const targetNetwork = NETWORKS["42"];
+  const targetNetwork = NETWORKS["1337"];
 
 
   return {

@@ -6,13 +6,14 @@ import fau from "../assets/fau_2.png";
 import { useAccount } from "../components/hooks/web3";
 
 const tokenImages = {
-  DAI: dai,
+  DAI: fau,
   WETH: weth,
   LINK: link,
   FAU: fau,
 };
 
 export const normalizeToken = async (web3, contract, currentToken) => {
+  console.log(currentToken)
   const fromWei = (amount) => {
     return web3.utils.fromWei(amount);
  };
