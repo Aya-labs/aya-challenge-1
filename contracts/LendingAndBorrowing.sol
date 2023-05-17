@@ -108,6 +108,7 @@ contract LendingAndBorrowing is Ownable {
     }
 
     function getTokensForLendingArray() public view returns (Token[] memory) {
+
         return tokensForLending;
     }
 
