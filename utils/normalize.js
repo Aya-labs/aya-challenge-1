@@ -13,8 +13,10 @@ const tokenImages = {
 };
 
 export const normalizeToken = async (web3, contract, currentToken) => {
-  console.log(currentToken)
+  console.log("Token Ratinaro "+currentToken)
+
   const fromWei = (amount) => {
+    console.log("Ndapindawo muno")
     return web3.utils.fromWei(amount);
  };
 
@@ -24,15 +26,19 @@ export const normalizeToken = async (web3, contract, currentToken) => {
 
 
  const accounts = await web3.eth.getAccounts();
+ console.log("The Accounts "+accounts)
  const account = accounts[0];
 
-
+console.log(account);
   const tokenInst = new web3.eth.Contract(ade.abi, currentToken.tokenAddress);
-
+  console.log(tokenInst.methods.balanceOf(account).call());
+  //Riri kufira pano apa sinhi ini
   const decimals = await tokenInst.methods.decimals().call()
-
+  
+  console.log("Decimals "+decimals);
   const walletBalance = await tokenInst.methods.balanceOf(account).call();
-
+ 
+  console.log("Zvirimuchikwama "+walletBalance);
 
   const totalSuppliedInContract = await contract.methods.getTotalTokenSupplied(currentToken.tokenAddress).call();
 

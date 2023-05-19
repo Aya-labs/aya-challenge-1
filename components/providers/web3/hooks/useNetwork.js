@@ -9,6 +9,7 @@ const NETWORKS = {
   42: "Kovan Test Network",
   56: "Binance Smart Chain",
   1337: "Ganache",
+  11155111: "Sepolia Test Network"
 };
 
 export const handler = (web3) => () => {

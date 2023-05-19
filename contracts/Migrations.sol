@@ -8,7 +8,7 @@ contract Migrations {
     owner = msg.sender;
   }
 
-  modifier restricted() {
+  modifier restricted() { 
     if (msg.sender == owner) _;
   }
 

@@ -9,6 +9,7 @@ const NETWORKS = {
   42: "Kovan Test Network",
   56: "Binance Smart Chain",
   1337: "Ganache",
+  11155111: "Sepolia Test Network"
 };
 
 
@@ -24,16 +25,17 @@ export const handler = (web3, contract) => () => {
     //all the tokens for lending
 
       const tokens = await contract.methods.getTokensForLendingArray().call()
-      console.log("All tokens "+tokens)
+      console.log("All tokens "+tokens.length)
 
       for (let i = 0; i < tokens.length; i++){
         const currentToken = tokens[i]
-
+        console.log("ONE"+i)
         const newToken = await normalizeToken(web3, contract, currentToken)
-
+        
         //You can actually see the token information coming here
         supplyAssets.push(newToken)
 
+        console.log("ONE"+i)
 
       }
 
