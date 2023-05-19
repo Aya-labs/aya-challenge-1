@@ -27,7 +27,7 @@ export const handler = (web3) => () => {
     }
   );
 
-  const targetNetwork = NETWORKS["1337"];
+  const targetNetwork = NETWORKS["11155111"];
 
 
   return {
