@@ -977,7 +977,7 @@
   "resolved" "https://registry.npmjs.org/@truffle/error/-/error-0.1.0.tgz"
   "version" "0.1.0"
 
-"@truffle/hdwallet-provider@^1.4.1":
+"@truffle/hdwallet-provider@^1.7.0":
   "integrity" "sha512-nT7BPJJ2jPCLJc5uZdVtRnRMny5he5d3kO9Hi80ZSqe5xlnK905grBptM/+CwOfbeqHKQirI1btwm6r3wIBM8A=="
   "resolved" "https://registry.npmjs.org/@truffle/hdwallet-provider/-/hdwallet-provider-1.7.0.tgz"
   "version" "1.7.0"

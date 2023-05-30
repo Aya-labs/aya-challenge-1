@@ -5,7 +5,7 @@ export default function ModalContact({closeModal}) {
   return (
     <BorderLayout>
       <div className="p-5">
-        <div className="flex justify-between items-center rounded-t">
+        <div className="flex justify-between  items-center rounded-t">
           <h3 className="text-xl font-medium text-gray-900 dark:text-white">
             Meet The Developer
           </h3>
@@ -35,7 +35,7 @@ export default function ModalContact({closeModal}) {
               </div> */}
       </div>
       {/* <!-- Modal body --> */}
-        <div className="pt-1 space-y-3">
+        <div className=" bg-black pt-1 space-y-3">
           <div className="flex flex-col justiy-center items-center">
           <button type="button" className="text-white bg-[#175bb0] hover:bg-[#043a7d] focus:ring-2 focus:outline-none focus:ring-[#3b5998]/50 font-medium rounded-1xl  text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3b5998]/55 mr-2 mb-2"
           onClick={() => {

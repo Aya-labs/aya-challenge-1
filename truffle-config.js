@@ -24,13 +24,13 @@ module.exports = {
       gasPrice: 10000000000,
     },
     sepolia: {
-      provider: function(){
+      provider: ()=>{
         return new HDWalletProvider(
           MNEMONIC,
           `https://sepolia.infura.io/v3/${INFURA_API_KEY}`
         )
       },
-      gas_price: 25000000000,
+      gas_price: 4465030,
       network_id: 11155111
     }
   },
