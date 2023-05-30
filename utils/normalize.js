@@ -28,14 +28,11 @@ export const normalizeToken = async (web3, contract, currentToken) => {
  const accounts = await web3.eth.getAccounts();
  console.log("The Accounts "+accounts)
  const account = accounts[0];
-
-console.log(account);
+ 
   const tokenInst = new web3.eth.Contract(ade.abi, currentToken.tokenAddress);
-  console.log(tokenInst.methods.balanceOf(account).call());
   //Riri kufira pano apa sinhi ini
   const decimals = await tokenInst.methods.decimals().call()
   
-  console.log("Decimals "+decimals);
   const walletBalance = await tokenInst.methods.balanceOf(account).call();
  
   console.log("Zvirimuchikwama "+walletBalance);
