@@ -427,7 +427,6 @@ contract LendingAndBorrowing is Ownable {
             (, int256 price, , , ) = priceFeed.latestRoundData();
 
             uint256 decimals = priceFeed.decimals();
-
             return (uint256(price), decimals);
         }
 

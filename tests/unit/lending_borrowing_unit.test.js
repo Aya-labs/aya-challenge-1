@@ -24,6 +24,7 @@ contract("LendingAndBorrowing", async (accounts) => {
       lending_and_borrowing = await LendingAndBorrowing.deployed();
       const dapp_usd_price_feed = await tools.get_contract("dai_usd_price_feed_address", "development")
 
+      console.log("THE PRICE FEED CONTRACT "+dapp_usd_price_feed);
       await larToken.transfer(lending_and_borrowing.address, BigInt(KEPT_BALANCE), {"from": owner });
       await larToken.transfer(account, BigInt(initial_amount),  {"from": owner})
       await adeToken.transfer(account, BigInt(initial_amount), {"from": owner})

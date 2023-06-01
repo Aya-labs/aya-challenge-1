@@ -10,11 +10,15 @@ let tokenDai = {} ;
 let mockV3 = {};
 
 const token_address = {
-    "dai_usd_price_feed_address": '0x777A68032a88E5A84678A77Af2CD65A7b3c0775a',
-    "eth_usd_price_feed_address": '0x9326BFA02ADD2366b30bacB125260Af641031331',
-    "link_usd_price_feed_address": '0x396c5E36DD0a0F5a5D33dae44368D4193f69a1F0',
+
+  //addresses of Chainlink smart contracts for token prices
+
+    "dai_usd_price_feed_address": '0x14866185B1962B63C3Ea9E03Bc1da838bab34C19',
+    "eth_usd_price_feed_address": '0x694AA1769357215DE4FAC081bf1f309aDC325306',
+    "link_usd_price_feed_address": '0xc59E3633BAAC79493d908e63626716e204A45EdF',
     "fau_usd_price_feed_address": '0x777A68032a88E5A84678A77Af2CD65A7b3c0775a',
-    "dai_token_address": '0xFf795577d9AC8bD7D90Ee22b6C1703490b6512FD',
+    
+    "dai_token_address": '0x94791765486dE01BDFed2c66d2e1123c519b37E1',
     "weth_token_address": '0xd0a1e359811322d97991e03f863a0c30c2cf029c',
     "link_token_address": '0xa36085F69e2889c224210F603D836748e7dC0088',
     "fau_token_address": '0xFab46E002BbF0b4509813474841E0716E6730136',
@@ -54,6 +58,7 @@ const get_contract = async(contract_name, current_network, current_deployer)=>{
     let contract_addr;
     let contract_type = contract_to_mock[contract_name]
     if(current_network == "development"){
+        console.log("DEVELOPMENT")
         if (deployed)
         {
           contract_addr = contract_type["contractName"] == "MockDAIToken" ? tokenDai.address : mockV3.address
@@ -65,6 +70,7 @@ const get_contract = async(contract_name, current_network, current_deployer)=>{
     }
     else //for Production
     {
+      console.log("PRODUCTION")
         contract = new web3.eth.Contract(contract_type.abi, token_address[contract_name])
         contract_addr = contract._address
     }

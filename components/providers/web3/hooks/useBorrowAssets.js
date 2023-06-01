@@ -26,8 +26,6 @@ export const handler = (web3, contract) => () => {
         const newToken = await normalizeToken(web3, contract, currentToken)
 
         borrowAssets.push(newToken)
-
-
       }
 
       return borrowAssets
