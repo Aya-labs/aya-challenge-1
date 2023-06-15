@@ -38,7 +38,7 @@ It is deployed on the Ethereum Kovan Network.
 # How to use
 1. To deploy solidity smart contract on Kovan Network
 ```
-truffle deploy --network kovan
+truffle deploy --network sepolia
 
 ```
 2. Start the Server
@@ -54,3 +54,4 @@ npm run dev
     Website - https://paras-portfolio-flame.vercel.app/
  ```
 
+# challenge1
